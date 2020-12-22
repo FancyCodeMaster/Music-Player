@@ -5,11 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="shortcut icon" href="https://www.google.com/s2/u/0/favicons?domain=rikeshsilwalkhatri.com.np" type="image/png">
-    <title>Template</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <title>Music Player</title>
 </head>
 <body>
-    <h1>Check it</h1>
+    <!-- Main Container -->
+    <div class="main-container" id="main-container">
+        <!-- Audio -->
+        <audio src="music/jacinto-1.mp3" controls hidden></audio>
+        <!-- The rotating image icon -->
+        <div class="title-image-container" id="title-image-container">
+            <img src="img/jacinto-1.jpg" alt="First image" class="title-image" id="title-image">
+        </div>
+        <!-- Music Title name and Artist name -->
+        <div class="title-artist-name" id="title-arist-name">
+            <!-- Music Name -->
+            <h3 class="title" id="title">Jambo Music</h3>
+            <!-- Artist Name -->
+            <h4 class="artist" id="artist">Rikesh Silwal</h4>
+        </div>
+        <!-- Music time container and progress bar container -->
+        <div class="progress-bar-container" id="progress-bar-container">
+            <!-- For measuring the progress -->
+            <div class="progress" id="progress">
+
+            </div>
+            <!-- Music Current Time and total Time -->
+            <div class="music-time" id="music-time">
+                <span class="initial-time" id="initial-time"></span>
+                <span class="total-time" id="total-time"></span>
+            </div>
+        </div>
+        <!-- Play , pause , next , prev , shuffle and repeat icons container -->
+        <div class="music-icons-container" id="music-icons-container">
+            <!-- Shuffle Icon -->
+            <i class="fas fa-random" id="shuffle" title="Shuffle"></i>
+            <!-- Previous Song Icon -->
+            <i class="fas fa-backward" id="previous" title="Previous Song"></i>
+            <!-- Play/Pause Icon -->
+            <i class="fas fa-play" id="play" title="Play"></i>
+            <!-- Next Song Icon -->
+            <i class="fas fa-forward" id="next" title="Next Song"></i>
+            <!-- Repeat Icon -->
+            <i class="fas fa-redo" id="repeat" title="Repeat"></i>
+        </div>
+    </div>
     <!-- Script  -->
     <script src="script.js"></script>
 </body>
