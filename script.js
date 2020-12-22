@@ -98,7 +98,6 @@ const prevSong = () => {
     if(isShuffle===true){
         let checkIndex = Math.floor(Math.random() * 3);
         songIndex = checkIndex;
-        console.log(songIndex);
     }
     else if((songIndex<=3 && songIndex>0) && isShuffle===false) {
         songIndex--;

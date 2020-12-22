@@ -118,6 +118,35 @@ body {
 
 
 
+/* Media Queries */
+@media screen and (max-width : 420px) {
+    .main-container {
+        margin : 0 3%;
+    }
+
+    .music-icons-container .fas {
+        margin-right : 40px;
+    }
+}
+
+@media screen and (max-width : 300px) {
+    
+    .title-image-container {
+        top : -20px;
+    }
+
+    .title-image {
+        width : 80%;
+        height : 80%;
+    }
+   
+    .music-icons-container .fas {
+        margin-right : 30px;
+    }
+}
+
+
+
 
 
 
