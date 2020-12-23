@@ -243,29 +243,29 @@ const getMusicTime = (event) => {
     let currentSec = Math.floor(currentTime % 60);
 
     let duration = event.srcElement.duration;
+    let totalMin , totalSec;
 
     if(duration) {
-        let totalMin = Math.floor(duration / 60);
-        let totalSec = Math.round(duration % 60);
-    
-
-        progress.style.width = `${(currentTime / duration) * 100}%`;
-
-        if(currentSec < 10) {
-            initialTime.textContent = `${currentMin}:0${currentSec}`;
-        }
-        else {
-            initialTime.textContent = `${currentMin}:${currentSec}`;
-        }
-
-        if(totalSec < 10) {
-            totalTime.textContent = `${totalMin}:0${totalSec}`;
-        }
-        else {
-            totalTime.textContent = `${totalMin}:${totalSec}`;
-        }
-
+        totalMin = Math.floor(duration / 60);
+        totalSec = Math.round(duration % 60);
     }
+
+    progress.style.width = `${(currentTime / duration) * 100}%`;
+
+    if(currentSec < 10) {
+        initialTime.textContent = `${currentMin}:0${currentSec}`;
+    }
+    else {
+        initialTime.textContent = `${currentMin}:${currentSec}`;
+    }
+
+    if(totalSec < 10) {
+        totalTime.textContent = `${totalMin}:0${totalSec}`;
+    }
+    else {
+        totalTime.textContent = `${totalMin}:${totalSec}`;
+    }
+
 
 
 };
